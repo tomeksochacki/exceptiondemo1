@@ -6,7 +6,7 @@ public class DemoException1 {
         try {
             System.out.println("Before generate exception.");
 
-            tab[10] = 7;
+            tab[0] = 7;
             System.out.println("This statement is not println.");
         }
         catch (ArrayIndexOutOfBoundsException ex){
