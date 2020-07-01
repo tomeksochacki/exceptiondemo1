@@ -1,15 +1,19 @@
 package mypackageexampleexception;
 
-import jdk.nashorn.internal.parser.JSONParser;
 
 public class DemoException2 {
+
+    static void  genExceptionTwo(){
+        System.out.println(5/0);
+    }
+
     static void genException() {
-        int[] nums = new int[4];
+        int[] num = new int[4];
         System.out.println("Before generate exception");
 
-        nums[7] = 10;
+        num[10] = 10;
         System.out.println("This statement is not print.");
-    };
+    }
 
 }
 
@@ -21,5 +25,13 @@ class ExceptionTest{
         System.out.println("Index out of bounds.");
     }
         System.out.println("After catch");
+
+    try {
+        DemoException2.genExceptionTwo();
+    }catch (ArithmeticException excep){
+        System.out.println("1" + excep.getMessage());
+    }
+
+
     }
 }
